@@ -1,0 +1,31 @@
+
+using cypress request by calling url using method GET
+
+
+//
+describe('APi Testing',())=>{
+
+it("Get API Test - Category" ,()=>)
+
+
+
+//all response will store in (response obj)
+Cypress takes GET method bydefaul,if GET method not used in below line it should be fine
+cy.request('GET',https://api.tmsandbox.co.nz/v1/Categories/6327/Details.json?catalogue=false).then(response)=>{
+
+//using response obj with assesrtion.using chai asserstion
+expect(response.status).equal(200)
+
+
+
+expect (response.body).has.property('Name','Carbon credits')
+expect (response.body).has.property('canrelist','True')
+expect (response.body.promorions[1]).has.property('Description','Good position in cateogory')
+
+
+
+
+
+
+})
+})
